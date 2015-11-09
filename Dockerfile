@@ -30,7 +30,7 @@ RUN apt-get -y --force-yes install libboost-python-dev
 RUN cd /opt/caffe \
    && make pycaffe -j8
 
-RUN apt-get -y --force-yes install python-protobuf
-
 RUN mkdir /models
 RUN cd /models && wget http://dl.caffe.berkeleyvision.org/bvlc_googlenet.caffemodel
+
+RUN conda install protobuf
