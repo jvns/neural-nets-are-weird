@@ -37,12 +37,15 @@ RUN conda install protobuf
 RUN conda install opencv
 RUN apt-get -y --force-yes install imagemagick
 
+# get labels for image class outputs(will be important!)
+RUN /opt/caffe/data/ilsvrc12/get_ilsvrc_aux.sh
+
 #RUN pip install --upgrade git+git://github.com/lisa-lab/pylearn2.git
 #RUN pip install --upgrade --no-deps git+git://github.com/Theano/Theano.git
 #RUN pip install --no-deps git+git://github.com/Lasagne/Lasagne
 #RUN cd /opt && \
 #  git clone --depth 1 git://github.com/kitofans/caffe-theano-conversion
 
-RUN git clone https://github.com/piergiaj/caffe-to-theano.git --depth 1 /opt/caffe-to-theano
+#RUN git clone https://github.com/piergiaj/caffe-to-theano.git --depth 1 /opt/caffe-to-theano
 
-RUN cd /opt && git clone https://github.com/yosinski/deep-visualization-toolbox.git
+#RUN cd /opt && git clone https://github.com/yosinski/deep-visualization-toolbox.git
