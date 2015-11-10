@@ -34,3 +34,15 @@ RUN mkdir /models
 RUN cd /models && wget http://dl.caffe.berkeleyvision.org/bvlc_googlenet.caffemodel
 
 RUN conda install protobuf
+RUN conda install opencv
+RUN apt-get -y --force-yes install imagemagick
+
+#RUN pip install --upgrade git+git://github.com/lisa-lab/pylearn2.git
+#RUN pip install --upgrade --no-deps git+git://github.com/Theano/Theano.git
+#RUN pip install --no-deps git+git://github.com/Lasagne/Lasagne
+#RUN cd /opt && \
+#  git clone --depth 1 git://github.com/kitofans/caffe-theano-conversion
+
+RUN git clone https://github.com/piergiaj/caffe-to-theano.git --depth 1 /opt/caffe-to-theano
+
+RUN cd /opt && git clone https://github.com/yosinski/deep-visualization-toolbox.git
