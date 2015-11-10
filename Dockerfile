@@ -49,3 +49,8 @@ RUN /opt/caffe/data/ilsvrc12/get_ilsvrc_aux.sh
 #RUN git clone https://github.com/piergiaj/caffe-to-theano.git --depth 1 /opt/caffe-to-theano
 
 #RUN cd /opt && git clone https://github.com/yosinski/deep-visualization-toolbox.git
+
+# set force_backword=true in network config
+RUN echo LS0tIGRlcGxveS5wcm90b3R4dC5leGFtcGxlCTIwMTUtMTEtMTAgMDE6NTg6MzYuNDUyNjgxMTg3ICswMDAwCisrKyBkZXBsb3kucHJvdG90eHQJMjAxNS0xMS0xMCAwMjowMDoxNy40MzI2ODQxMDYgKzAwMDAKQEAgLTEsNSArMSw2IEBACiBuYW1lOiAiR29vZ2xlTmV0IgogaW5wdXQ6ICJkYXRhIgorZm9yY2VfYmFja3dhcmQ6IHRydWUKIGlucHV0X3NoYXBlIHsKICAgZGltOiAxMAogICBkaW06IDMK \
+    | base64 -d \
+    | patch -u /opt/caffe/models/bvlc_googlenet/deploy.prototxt
