@@ -1,6 +1,6 @@
 # neural nets are weird
 
-If you want to get this working on your computer, this should work:
+Source code for the article "How to trick a neural network into thinking a panda is a vulture". Here's how to get it going! It will download about 1.5GB and take maybe half an hour to set up and compile everything, so don't expect it to be instant. Tested on Linux, untested on OS X.
 
 ```
 git clone https://github.com/jvns/neural-nets-are-weird
@@ -9,4 +9,4 @@ docker build -t neural-nets-fun:caffe .
 docker run -i -p 9990:8888 -v $PWD:/neural-nets -t neural-nets-fun:caffe /bin/bash -c 'export PYTHONPATH=/opt/caffe/python && cd /neural-nets && ipython notebook --no-browser --ip 0.0.0.0'
 ```
 
-This should start a server with IPython Notebook running, and you can see the example at [http://localhost:9990/notebooks/notebooks/neural-nets-are-weird.ipynb](http://localhost:9990/notebooks/notebooks/neural-nets-are-weird.ipynb)
+This should start a server with IPython Notebook running, and you can start playing with neural networks yourself at [http://localhost:9990/notebooks/notebooks/neural-nets-are-weird.ipynb](http://localhost:9990/notebooks/notebooks/neural-nets-are-weird.ipynb)
