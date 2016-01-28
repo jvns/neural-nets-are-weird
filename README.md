@@ -12,3 +12,6 @@ docker run -i -p 9990:9990 -v $PWD:/neural-nets -t neural-nets-fun:caffe /bin/ba
 **On Linux:** Once you've run those commands, click on this link: [http://localhost:9990/notebooks/notebooks/neural-nets-are-weird.ipynb](http://localhost:9990/notebooks/notebooks/neural-nets-are-weird.ipynb) and you should be good to go! This starts an IPython Notebook server, which lets you run code interactively.
 
 **On OSX:** You must use the address of the VM hosting Docker in the URL (not localhost). This address is shown when starting Docker, or you can get the *docker-address* by running the command ````docker-machine ip default```` Then point your browser to *http://docker-address:9990* and follow along with the instructions in the IPython notebook.
+
+
+There's [another Docker image for Caffe here](https://hub.docker.com/r/mjaskowski/caffe-cpu/)
