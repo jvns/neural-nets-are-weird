@@ -24,5 +24,5 @@ notebook:
 		-v ${PWD}:/neural-nets \
 		-w /neural-nets \
 		-t ${TAG} \
-		/bin/bash -c 'mkdir /home/you && jupyter notebook --no-browser --ip 0.0.0.0 --port=9990'
+		/bin/bash -c 'mkdir /home/you && jupyter notebook --NotebookApp.token="weirdness" --no-browser --ip 0.0.0.0 --port=9990'
 
